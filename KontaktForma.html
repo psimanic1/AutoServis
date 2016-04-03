@@ -5,10 +5,11 @@
 <TITLE>Auto Simanić</TITLE>
 <link rel="stylesheet"  href="Logo.css">
 <link rel="stylesheet"  href="Pocetna.css">
-
+<script src="regex.js"></script>
+<script src="valpriunosu.js"></script>
 </HEAD>
 <BODY>
-	
+
 	<div id="Zaglavlje">
 	
 	<div class="Logo">
@@ -36,23 +37,34 @@
 	</div>
 	
 	<div class="forma">
-	<form action="Forma" method="GET|POST">
+	<form action="Forma" onsubmit="return(regeks());" method="GET|POST">
 	
 	<div id="labela_forma">
 	<label for="E-Mail">E-Mail:</label><br>
-	<input type="email" name="email" required><br>
+	<input type="email" name="email" id="email" oninput="bojaEmail();" required><br>
+	</div>
+	<br>
+
+	<div id="labela_naziv">
+	<label for="ImeiPrezime">Ime i Prezime:</label>
+	<input type="text" name="ImeiPrezime" id="ImeiPrezime" oninput="bojaIme();" required><br>
 	</div>
 	<br>
 	
-	<div id="labela_naziv">
-	<label for="ImeiPrezime">Ime i Prezime:</label>
-	<input type="text" name="ImeiPrezime" id="ImeiPrezime" required><br>
+	<div id="labela_drzava">
+	<label for="Država">Država:</label><br>
+	<select id="odabir"> 
+		<option value="bih">Bosna i Hercegovina</option>
+		<option value="srb">Srbija</option>
+		<option value="hrv">Hrvatska</option>
+		<option value="cg">Crna Gora</option>
+	</select>
+	
 	</div>
-	<br>
 	
 	<div id="labela_broj">
 	<label for="BrojTel">Broj Telefona:</label>
-	<input type="tel" name="tel" id="tel" required><br>
+	<input type="tel" name="tel" id="tel" oninput="bojaTel();" required><br>
 	</div>
 	
 	<div id="dugme">
