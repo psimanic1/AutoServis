@@ -88,13 +88,7 @@
 							
 							$sv1 = strtoupper($sv1);
 							$sv2 = strtoupper($sv2);
-							if($sv1[0]=='"') return $sv1[1]> $sv2[0];
-							else
-							if($sv2[0]=='"') return $sv1[0]> $sv2[1];
-							else
-								if($sv1[0]=='"' && $sv2[0]=='"') return $sv1[1]>$sv2[1];
-							else
-							return $sv1[0] > $sv2[0];
+							return $sv1[1] > $sv2[1];
 						}
 						
 						$vijesti = file("dodaj_novosti.csv");

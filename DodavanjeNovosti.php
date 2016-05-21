@@ -31,7 +31,7 @@
 	session_start();
 	if(isset($_SESSION['login'])){
 	print "<ul> 
-		<li><a href='Zad1.php'>Početna</a></li>
+		<li><a href='index.php'>Početna</a></li>
 		<li><a href='Onama.php'>O nama</a></li>
 		<li><a href='KontaktForma.php'>Kontakt</a></li>
 		<li><a href='Eksterni_linkovi.php'>Eksterni linkovi</a></li>
@@ -41,7 +41,7 @@
 	}
 	else {
 	print "<ul> 
-		<li><a href='Zad1.php'>Početna</a></li>
+		<li><a href='index.php'>Početna</a></li>
 		<li><a href='Onama.php'>O nama</a></li>
 		<li><a href='KontaktForma.php'>Kontakt</a></li>
 		<li><a href='Eksterni_linkovi.php'>Eksterni linkovi</a></li>
