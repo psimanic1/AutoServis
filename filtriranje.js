@@ -2,7 +2,8 @@ function feelter(){
 		var listaVijesti = document.getElementsByTagName("time");
 		var listaV = document.getElementsByTagName("li");
 		var sad = new Date();
-		var indeks = 4;
+		var ijbg= document.getElementsByClassName("Menu")[0];
+		var indeks=ijbg.children[0].children.length;
 		
 		if(document.getElementById("odabir").value=="danas"){
 		

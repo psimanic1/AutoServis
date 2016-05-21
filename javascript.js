@@ -26,7 +26,7 @@ onload = function Datum(){
 					{
 						if(min-ispis_date.getMinutes()==0)
 						{
-							document.getElementsByClassName(klasa)[i].innerHTML=" par sekundi";
+							document.getElementsByClassName(klasa)[i].innerHTML=" prije par sekundi";
 						}
 						else if(min-ispis_date.getMinutes()<5)
 							document.getElementsByClassName(klasa)[i].innerHTML=ispisi_(min-ispis_date.getMinutes(),Minuta[0]);
@@ -81,6 +81,27 @@ onload = function Datum(){
 							document.getElementsByClassName(klasa)[i].innerHTML=ispisi_(dd-ispis_date.getDate(),Dan[0]);
 						}
 					}
+					else if(dd-ispis_date.getDate()>2 && dd-ispis_date.getDate()<=7)
+					{
+						document.getElementsByClassName(klasa)[i].innerHTML=ispisi_(dd-ispis_date.getDate(),Dan[1]);
+					}
+					else if((dd)-ispis_date.getDate()>=7 && (dd)-ispis_date.getDate()<14)
+						{
+							document.getElementsByClassName(klasa)[i].innerHTML=ispisi_(1,Sedmica[0]);
+						}
+						else if((dd)-ispis_date.getDate()>=14 && (dd)-ispis_date.getDate()<21)
+						{
+							document.getElementsByClassName(klasa)[i].innerHTML=ispisi_(2,Sedmica[1]);
+						}
+						else if(dd-ispis_date.getDate()>=21 && dd-ispis_date.getDate()<28)
+						{
+							document.getElementsByClassName(klasa)[i].innerHTML=ispisi_(3,Sedmica[1]);
+						}
+						else if(dd-ispis_date.getDate()==28)
+						{
+							document.getElementsByClassName(klasa)[i].innerHTML=ispisi_(4,Sedmica[1]);
+						}
+					
 					}else if(mm-(ispis_date.getMonth()+1)==1)
 					{
 							if((30+dd)-ispis_date.getDate()>2 && (30+dd)-ispis_date.getDate()<7)
